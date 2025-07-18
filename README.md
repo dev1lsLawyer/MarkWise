@@ -17,8 +17,7 @@ npm install
 ng serve
 
 ```
-###
-Advanced Features (for future)
+## Advanced Features (for future)
 - GitHub flavored markdown support
 - Upload and embed images
 - Collaborative editing (like Google Docs)
