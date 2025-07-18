@@ -12,7 +12,7 @@
 ## 💻 Getting Started
 ```bash
 
-cd markai
+cd markwise
 npm install
 ng serve
 
