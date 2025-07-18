@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+$my-light-theme: mat.define-theme((color: (primary: mat.$violet-palette,
+        tertiary: mat.$red-palette,
+      ),
+      typography: (brand-family: 'Roboto',
+      ),
+      density: 0,
+    ));
+
+html {
+  @include mat.theme($my-light-theme);
+  color-scheme: light;
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+}
+
+/* 🌗 Light/Dark Theme Switching */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+
+  /* Override Material shape system tokens */
+  --mdc-shape-small: 4px;
+  --mdc-shape-medium: 4px;
+  --mdc-shape-large: 4px;
+}
+
+.dark-theme {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Optional: Box sizing fix */
+*, *::before, *::after {
+  box-sizing: border-box;
+}

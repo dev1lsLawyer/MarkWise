@@ -1,0 +1,22 @@
+.editor-preview-container {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    height: calc(100vh - 64px);
+    /* account for toolbar height */
+}
+
+app-editor,
+app-preview {
+    flex: 1;
+    overflow: auto;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
